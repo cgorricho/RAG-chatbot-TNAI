@@ -1,0 +1,10 @@
+tiktoken
+PyPDF2
+langchain
+openai
+langchain-community
+langchain-openai
+langchainhub
+chromadb
+PyCryptodome
+streamlit
