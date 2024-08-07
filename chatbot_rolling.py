@@ -176,7 +176,7 @@ global_llm = "gpt-4o"
 def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
 
-def get_source(context):
+def get_source(context, n=10):
     all_pages = []
 
     for doc in context:
@@ -185,7 +185,7 @@ def get_source(context):
         print(page)
         all_pages.extend(page)
 
-        source_pages = '  - ' + '\n\n  - '.join([pg for pg in sorted(set(all_pages))])
+    source_pages = '  - ' + '\n\n  - '.join([pg for pg in list(sorted(set(all_pages)))[:n]])
     
     return source_pages
 
